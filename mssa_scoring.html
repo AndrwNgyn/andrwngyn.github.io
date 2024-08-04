@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Nguyen Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="home-button">
+        <a href="index.html">
+            <img class="logo-image" src="media/andrew_gif.gif" alt="Andrew Home">
+        </a>
+    </section>
+    <section class="header">
+        
+    </section>
+    <main>
+        <p class="back-to-projects">
+            <a href="projects.html">← Back to Projects</a>
+        </p>
+        <h1 class="projects-title">MSSA Scoring Algorithm</h1>
+        <iframe src="media/project_media/MSSA_scoring_algorithm/BaldwinPark.html" width="800" height="600" style="border:none;"></iframe>
+        <p class="project-body">
+            After leaving my internship at Picarro, where I conducted intensive geospatial analysis with GeoPandas, ArcGIS, and connected to many APIs 
+            (GeoServer, ESRI, Box), I decided to take the skills that I learned into the healthcare field. 
+            This geospatial analysis assigns priority scores to Medical Service Study Areas (MSSA) based on a myriad of factors to quantify both an area's
+            access to a healthcare provider and its quality care. This scoring algorithm is an expansion from the Department of Healthcare Access and Information's (HCAI) MSSA scoring model, which 
+            is currently only based on a binary scoring method. My attempt at a scoring model aims to <i> extend </i> this model to include additional factors to yield more nuanced scores, which can
+            act as the first step in determining which areas should be given federal resources or aid. Despite the analysis being restricted to California, this small sample will provide insight
+            into its effectiveness across all states.  
+        </p>
+        
+        <p class="project-body">
+            The priority score is calculated from two main components: data from the MSSA itself and hospital data. The MSSA portion includes factors such as poverty rate and
+            provider-to-patient ratio, whereas the hospital data portion includes mortality rates and the Case Mix Index (CMI), which assigns higher scores to hospitals with complexity
+            and diversity of patients discharged. All factors are binned based on percentiles on a scale of 0 to 5. Additionally, as some MSSAs do not have any hospitals within them,
+            the two nearest hospitals are used, with their distance converted into a hospital score multiplier – that is, the further the nearest hospital is from the MSSA, the higher it will 
+            contribute to the priority score. 
+        </p>
+        
+        <img src="media/project_media/MSSA_scoring_algorithm/MSSA_Algorithm.png" alt="Project 1 Preview" class="centered-image">
+        
+        <p class="project-body">
+            After score calculation, I have set the threshold of “high priority” MSSA priority scores to be the median (10.25 and above). This means out of 542 MSSAs
+            in California, 262 were considered high priority, in contrast to HCAI's 268 MSSA areas designated as Primary Care Shortage Areas (PCSAs). Common cases include rural areas where
+            nearest hosptials are very far away or hospitals that have high mortality rates or low CMIs. 
+        </p>
+        
+        <img src="media/project_media/MSSA_scoring_algorithm/MSSA_scores_hist.jpg" alt="MSSA scores hist" class="centered-image">
+        
+        <p class="project-body">
+            This expanded scoring model for MSSAs offers a more nuanced approach to assessing healthcare accessibility and quality than HCAI's current binary scoring system.
+            Though there are some limitations to this algorithm that must be mentioned. One limitation includes inaccurate quantification of distance, as it currently does not take into account traffic patterns or roads.
+            One other area of improvement is to include more factors, as the current factors in the algorithm does not completely determine a shortage. Future improvements will be aimed towards adding
+            additional factors and also expand the range of states beyond California. With further refinement, this algorithm can represent a significant step toward addressing 
+            disparities in healthcare access and quality.
+        </p>
+
+        <p class="project-body">
+            If you'd like to check the repo for this project, click <a href="https://github.com/AndrwNgyn/MSSA_scoring_algorithm">here</a>:
+        </p>
+    </main>
+</body>
+</html>
