@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andrew Nguyen Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" type="image/x-icon" href="/media/favicon.png">
+</head>
+<body>
+    <section class="home-button">
+        <a href="index.html">
+            <img class="logo-image" src="media/andrew_logo.png" alt="Andrew Home">
+        </a>
+    </section>
+    <section class="header">
+        
+    </section>
+    <main>
+        <h1 class="projects-title">Hey! I'm Andrew.</h1>
+        <p class="project-body">
+            I’m Andrew. I am currently pursuing a Master of Data Science degree at UCI, and I am passionate about making healthcare more accessible 
+            through innovative predictive models or creating algorithms to pinpoint resource allocation. 
+        </p>
+        <p class="project-body">
+            I also like to bake, and recently I have gotten into 35mm film photography!
+        </p>
+
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <div class="numbertext">1 / 5</div>
+                <img src="media/HappyHollowBridge.jpeg" style="width:100%" class="slideshow-img">
+                <div class="text">Me and my friends entering Happy Hollow in San Jose</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">2 / 5</div>
+                <img src="media/DairyFreeCremePuffs.jpg" style="width:100%" class="slideshow-img">
+                <div class="text">Made some dairy free creme puffs for the lactose intolerant (me)</div>
+            </div>
+            
+            <div class="mySlides fade">
+                <div class="numbertext">3 / 5</div>
+                <img src="media/toto.JPG" style="width:100%" class="slideshow-img">
+                <div class="text">My dog Toto</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">4 / 5</div>
+                <img src="media/CherriesNCreamCheeseDanishes.png" style="width:100%" class="slideshow-img">
+                <div class="text">Cherries and Cream Cheese Danishes made with cherries on sale</div>
+            </div>
+
+            <div class="mySlides fade">
+                <div class="numbertext">5 / 5</div>
+                <img src="media/sheep.jpeg" style="width:100%" class="slideshow-img">
+                <div class="text">A sheep!</div>
+            </div>
+            
+            <!-- Navigation buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            
+            <!-- Dots/circles -->
+            <div style="text-align:center", class = "dot-container">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+                <span class="dot" onclick="currentSlide(4)"></span>
+                <span class="dot" onclick="currentSlide(5)"></span>
+            </div>
+        </div>        
+        </p>
+    </main>
+<script src="slideshow.js"></script>
+</body>
+</html>
