@@ -154,7 +154,21 @@ main {
 .project-header a:visited {
     color: #0066cc; /* Visited link color */
 }
+.tag-container {
+    margin-top: 10px;
+}
 
+.tag {
+    display: inline-block;
+    background-color: #e8e8e8;
+    color: #333;
+    font-size: 14px;
+    font-family: 'Georgia', serif;
+    padding: 5px 10px;
+    border-radius: 20px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
 .project-description {
     font-family: 'Georgia', serif;
     font-size: 16px;
